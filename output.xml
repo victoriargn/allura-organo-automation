@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.2 on darwin)" generated="2025-03-04T00:01:29.847903" rpa="false" schemaversion="5">
+<suite id="s1" name="Required Fields Empty" source="/Users/victoriaregina/Desktop/Alura/Formation QA -  processes and tests automation/Robot Framework Course/organo-automation/tests/required_fields_empty.robot">
+<test id="s1-t1" name="Verificar que o formulário não é enviado ao deixar os campos obrigatórios em branco" line="13">
+<kw name="Dado que o formulário de colaborador esteja em exibição" owner="setup_teardown" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-03-04T00:01:29.995730" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:3000/'.</msg>
+<arg>url=http://localhost:3000/</arg>
+<arg>browser=Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-03-04T00:01:29.995578" elapsed="0.781192"/>
+</kw>
+<status status="PASS" start="2025-03-04T00:01:29.995016" elapsed="0.782091"/>
+</kw>
+<kw name="Quando os campos obrigatórios forem enviados em branco" owner="register">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-03-04T00:01:30.779458" level="INFO">Clicking button 'id:form-botao'.</msg>
+<arg>${BUTTON_CREATE_CARD}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-04T00:01:30.778842" elapsed="0.044689"/>
+</kw>
+<status status="PASS" start="2025-03-04T00:01:30.777828" elapsed="0.045869"/>
+</kw>
+<kw name="Então mensagens de campo obrigatório devem ser exibidas" owner="register">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-03-04T00:01:30.834615" level="INFO">Element 'id:form-nome-erro' is displayed.</msg>
+<arg>id:form-nome-erro</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-04T00:01:30.825068" elapsed="0.009684"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-03-04T00:01:30.843759" level="INFO">Element 'id:form-cargo-erro' is displayed.</msg>
+<arg>id:form-cargo-erro</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-04T00:01:30.834908" elapsed="0.008973"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-03-04T00:01:30.851206" level="INFO">Element 'id:form-times-erro' is displayed.</msg>
+<arg>id:form-times-erro</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-04T00:01:30.843985" elapsed="0.007324"/>
+</kw>
+<status status="PASS" start="2025-03-04T00:01:30.824532" elapsed="0.026842"/>
+</kw>
+<kw name="E o card não será criado" owner="register">
+<kw name="Element Should Not Be Visible" owner="SeleniumLibrary">
+<msg time="2025-03-04T00:01:30.857223" level="INFO">Element 'class:colaborador' did not exist.</msg>
+<arg>${CARD_COLLABORATOR}</arg>
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<status status="PASS" start="2025-03-04T00:01:30.851833" elapsed="0.005519"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-04T00:01:35.859221" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-04T00:01:30.857485" elapsed="5.002598"/>
+</kw>
+<status status="PASS" start="2025-03-04T00:01:30.851630" elapsed="5.008742"/>
+</kw>
+<kw name="Fechar o navegador" owner="setup_teardown" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-03-04T00:01:35.862328" elapsed="0.078560"/>
+</kw>
+<status status="PASS" start="2025-03-04T00:01:35.861652" elapsed="0.079393"/>
+</kw>
+<status status="PASS" start="2025-03-04T00:01:29.994541" elapsed="5.946599"/>
+</test>
+<status status="PASS" start="2025-03-04T00:01:29.849544" elapsed="6.092090"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Required Fields Empty" id="s1" pass="1" fail="0" skip="0">Required Fields Empty</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
